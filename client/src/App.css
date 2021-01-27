@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  scrollbar-width: thin;
+}
+.App_body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}

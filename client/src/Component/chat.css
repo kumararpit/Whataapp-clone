@@ -1,0 +1,117 @@
+.chatbar_container {
+  display: flex;
+  flex: 0.72;
+  display: flex;
+  flex-direction: column;
+}
+.chat_header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: rgb(236, 234, 234);
+  border-bottom: 1px solid rgb(211, 211, 211);
+  cursor: pointer;
+}
+.chatheader_left {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.chatheader_username {
+  margin-left: 15px;
+  font-size: 20px;
+}
+.chatheader_right .chartheader_icon {
+  font-size: 20px !important;
+  color: rgb(121, 118, 118) !important;
+}
+.chatsection {
+  flex: 1;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(236, 234, 234);
+  border-top: 1px solid rgb(211, 211, 211);
+}
+.footer_center {
+  flex: 1;
+  padding: 8px;
+  background-color: white;
+  border-radius: 20px;
+}
+.footer_center input {
+  width: 95%;
+  margin-left: 0.5rem;
+  outline: none;
+  border: none;
+}
+.footer_left {
+  display: flex;
+  justify-content: space-between;
+}
+.footerleft_icons {
+  color: rgb(121, 118, 118) !important;
+}
+.footerright_icons {
+  color: rgb(121, 118, 118) !important;
+}
+/* chat section css */
+.chatsection {
+  background-image: url("../Assects/chatbackground.png");
+  background-repeat: repeat;
+}
+/* message part css */
+.chatsection {
+  overflow-y: scroll;
+}
+.message_container {
+  padding: 25px;
+}
+.message_section {
+  display: flex;
+}
+.message_clip {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  z-index: 1;
+}
+.message {
+  display: flex;
+  margin-bottom: 10px;
+  max-width: 52%;
+  padding: 0 10px 5px 10px;
+  flex-direction: column;
+  background-color: white;
+  z-index: 2;
+  border-radius: 0 5px 5px 5px;
+}
+.reciver_clip {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  background-color: rgb(182, 250, 182);
+  z-index: 1;
+}
+span {
+  font-size: small;
+  color: grey;
+}
+.reciver_message {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 10px;
+  max-width: 52%;
+  padding: 5px 10px 10px;
+  flex-direction: column;
+  background-color: white;
+  z-index: 2;
+  border-radius: 5px 0 5px 5px;
+  background-color: rgb(182, 250, 182);
+}
