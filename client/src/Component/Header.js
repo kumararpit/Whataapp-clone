@@ -4,7 +4,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
-import "./sidebar.css";
+import "../css/sidebar.css";
 function Header() {
   return (
     <div className="header_container">

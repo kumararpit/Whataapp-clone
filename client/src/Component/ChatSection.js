@@ -1,5 +1,5 @@
 import React from "react";
-import "./chat.css";
+import "../css/chat.css";
 function ChatSection({ username }) {
   return (
     <div className="message_container">

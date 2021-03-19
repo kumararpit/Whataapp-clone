@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::placeholder {
+  color: grey;
+}
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #fafafa;
+  background-color: #188ffd;
+}
+.screen1 {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, #eff6fe 50%, #54acd8 50%);
+  overflow: hidden;
+}
+.resigtration {
+  background-image: linear-gradient(to right, white 50%, #eff6fe 50%);
+  height: 90%;
+  margin: 2rem 8rem;
+  border-radius: 25px;
+  display: flex;
+}
+.left_form {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  padding: 3rem;
+}
+.left_form h1 {
+  font-size: 3rem;
+  color: rgb(117, 107, 107);
+}
+.left_form span {
+  font-size: 1rem;
+}
+.tab {
+  margin-top: 2.5rem;
+  display: none;
+}
+.input_field {
+  margin: 1rem 1rem 0.5rem 0;
+  width: 70%;
+  padding: 5px;
+  border: 1px solid rgb(172, 169, 169);
+  border-radius: 5px;
+  outline: none;
+}
+.right_form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  padding: 3rem;
+}
+.login_prev_info {
+  font-size: 1rem;
+}
+.register_buttons {
+  display: flex;
+}
+#nextBtn {
+  margin-left: 14rem;
+}
+
+.girl_png {
+  background-size: cover;
+  margin-top: 5rem;
+  width: 100%;
+  height: 30rem;
+  background-image: url("../Assects/girl.png");
+}
+.tab1 {
+  display: none;
+}

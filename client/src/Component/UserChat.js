@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import "./sidebar.css";
+import "../css/sidebar.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 // import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 function UserChat({ imgurl, username, lastmessage, active }) {
