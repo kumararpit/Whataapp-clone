@@ -1,84 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+// import StepOnedata from "./StepOnedata";
+// import StepTwodata from "./StepTwodata";
 import "../css/Register.css";
-function Login() {
-  var current_tab = 0;
-  showtab(current_tab);
-  function showtab(current_tab) {
-    var x = document.getElementsByClassName("tab");
-    console.log(x);
-    x[current_tab].style.display = "block";
-    if (current_tab === 0) {
-      document.getElementById("prevBtn").style.display = "none";
-    } else {
-      document.getElementById("nextBtn").style.display = "inline";
-    }
-    if (current_tab === x.length - 1) {
-      document.getElementById("nextBtn").innerHTML = "SignUp";
-    } else {
-      document.getElementById("nextBtn").innerHTML = "Next";
-    }
+export default function Register() {
+  // const [step, setstep] = useState(1);
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  // const nextstep = (step) => {
+  //   console.log(step);
+  //   setstep(++step);
+  //   if (step === 2) {
+  //     document.getElementById("nextBtn").innerHTML = "Sign Up";
+  //   }
+  // };
+  // const prevstep = (step) => {
+  //   setstep(--step);
+  //   if (step === 1) document.getElementById("nextBtn").innerHTML = "Next";
+  //   console.log(step);
+  // };
+  // function Switchcase(step) {
+  //   switch (step) {
+  //     case 1:
+  //       return <StepOnedata name={name} email={email} password={password} />;
+  //     case 2:
+  //       return (
+  //         <StepTwodata
+  //         // nextstep={step}
+  //         //  prevstep={step}
+  //         />
+  //       );
+  //     default:
+  //       return null;
+  //   }
+  // }
+  async function handleSubmit(event) {
+    event.preventDefault();
+    // const user = {
+    //   name: { name },
+    //   email: { email },
+    //   password: { password },
+    // };
+    await axios
+      .post("http://localhost:5000/api/user", { name, email, password })
+      .then((res) => console.log(name));
   }
   return (
     <div className="screen1">
       <div className="resigtration">
         <div className="left_form">
-          <form
-            className="form_upload"
-            action="upload"
-            method="post"
-            encType="multipart/form-data"
-          >
+          {/* {Switchcase(step)} */}
+          <div className="steponeform">
             <h1>Create Account</h1>
             <span id="tag_line">Let's come closer to your loved ones</span>
-            <p className="tab">
-              <input
-                type="text"
-                className="input_field"
-                placeholder="name"
-                onInput="this.className=''"
-              />
-              <input
-                type="email"
-                placeholder="email"
-                className="input_field"
-                onInput="this.className=''"
-              />
-              <input
-                type="password"
-                placeholder="password"
-                className="input_field"
-                onInput="this.className=''"
-              />
-            </p>
-            <p className="tab">
-              <input type="file" name="upfile" value="" />
-              <input
-                type="date"
-                placeholder="DOB"
-                className="input_field"
-                onInput="this.className=''"
-              />
-              <select className="input_field">
-                <option value="">Gender</option>
-                <option value="1">Male</option>
-                <option value="0">Female</option>
-              </select>
-
-              <textarea
-                placeholder="Tell us about yourself"
-                className="input_field"
-                onInput="this.className=''"
-              />
-            </p>
-            <div className="register_buttons">
-              <button type="button" id="prevBtn" onclick="nextPrev(-1)">
-                Previous
-              </button>
-              <button type="button" id="nextBtn" onclick="nextPrev(1)">
-                Next
-              </button>
-            </div>
-          </form>
+            <form className="formdata" onSubmit={handleSubmit}>
+              <div className="tab">
+                <input
+                  type="text"
+                  className="input_field"
+                  placeholder="name"
+                  value={name}
+                  onChange={(e) => setname(e.target.value)}
+                />
+                <input
+                  type="email"
+                  placeholder="email"
+                  className="input_field"
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}
+                />
+                <input
+                  type="password"
+                  placeholder="password"
+                  className="input_field"
+                  value={password}
+                  onChange={(e) => setpassword(e.target.value)}
+                />
+              </div>
+              <div className="register_buttons">
+                {/* <button type="button" id="prevBtn">
+              Previous
+            </button> */}
+                <button type="button" type="submit" id="nextBtn">
+                  Next
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
         <div className="right_form">
           <div className="login_prev">
@@ -91,5 +100,3 @@ function Login() {
     </div>
   );
 }
-
-export default Login;

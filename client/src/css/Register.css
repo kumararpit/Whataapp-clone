@@ -1,17 +1,33 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu,
+    Cantarell, Fira Sans, sans-serif;
 }
 ::placeholder {
   color: grey;
 }
 button {
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
   border: none;
   color: #fafafa;
   background-color: #188ffd;
+  cursor: pointer;
+}
+/* css of steptwodata */
+.profilepic {
+  display: flex;
+  justify-content: center;
+}
+#profilepic {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+}
+.input_field {
+  width: 100%;
 }
 .screen1 {
   margin: 0;
@@ -30,10 +46,13 @@ button {
 }
 .left_form {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
   width: 50%;
   height: 80%;
   padding: 3rem;
+  margin-top: 4rem;
 }
 .left_form h1 {
   font-size: 3rem;
@@ -44,7 +63,6 @@ button {
 }
 .tab {
   margin-top: 2.5rem;
-  display: none;
 }
 .input_field {
   margin: 1rem 1rem 0.5rem 0;
@@ -65,19 +83,19 @@ button {
   font-size: 1rem;
 }
 .register_buttons {
-  display: flex;
+  /* display: flex;
+  align-self: flex-start; */
+  margin-top: 0.5rem;
+  text-align: center;
 }
 #nextBtn {
-  margin-left: 14rem;
+  /* margin-left: 14rem; */
+  width: 10rem;
 }
-
 .girl_png {
   background-size: cover;
   margin-top: 5rem;
   width: 100%;
   height: 30rem;
   background-image: url("../Assects/girl.png");
-}
-.tab1 {
-  display: none;
 }

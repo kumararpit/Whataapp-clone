@@ -7,8 +7,7 @@ function ChatSection({ username }) {
         <div className="message_clip" />
         <p className="message">
           <span>{username}</span>
-          hello arpit this side how are you vbvb vibv vb ds v ds vbdsb dvb ds
-          doi vhds soh dh iosd
+          hello
         </p>
       </div>
       <div className="message_section">
